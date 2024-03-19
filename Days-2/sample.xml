@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<products>
-    <product>
-        <pid>0</pid>
+<products><product><pid>0</pid>
         <title>Title - 0</title>
         <category>
             <cid>0</cid>
