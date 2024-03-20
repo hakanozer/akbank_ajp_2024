@@ -77,6 +77,7 @@ public class CustomerDB {
         DB db = new DB();
         int status = 0;
         try {
+            //String sqlUpdate = "update set customer name  = ?, email = ? where cid = ?";
             String sql = "delete from customer where cid = ?";
             PreparedStatement pre = db.connect().prepareStatement(sql);
             pre.setInt(1, cid);
