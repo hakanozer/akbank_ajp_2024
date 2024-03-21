@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequiredArgsConstructor
 public class NoteRestController {
@@ -17,6 +19,16 @@ public class NoteRestController {
     @PostMapping("add")
     public Note addNote(@RequestBody Note note) {
         return noteService.add(note);
+    }
+
+    @GetMapping("allNote")
+    public List<Note> allNote() {
+        return noteService.allNote();
+    }
+
+    @PostMapping("search")
+    public List<Note> search(@RequestBody Note note) {
+        return noteService.search(note);
     }
 
 }

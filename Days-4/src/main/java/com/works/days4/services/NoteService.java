@@ -5,6 +5,8 @@ import com.works.days4.repositories.NoteRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class NoteService {
@@ -15,6 +17,14 @@ public class NoteService {
         // insert into note values(default, ?, ?)
         noteRepository.save(note);
         return note;
+    }
+
+    public List<Note> allNote() {
+        return noteRepository.findAll();
+    }
+
+    public List<Note> search(Note note) {
+        return noteRepository.findByTitleContainsIgnoreCase(note.getTitle());
     }
 
 
