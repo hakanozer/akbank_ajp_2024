@@ -13,12 +13,14 @@ import org.springframework.jms.support.converter.MessageType;
 @Configuration
 public class JMSConfig {
 
+    /*
     @Bean(name = "mailContainerFactory")
     public JmsListenerContainerFactory<?> mailContainerFactory(ConnectionFactory connectionFactory, DefaultJmsListenerContainerFactoryConfigurer configurer) {
         DefaultJmsListenerContainerFactory factory = new DefaultJmsListenerContainerFactory();
         configurer.configure(factory, connectionFactory);
         return factory;
     }
+     */
 
     @Bean
     public MessageConverter jacksonJmsMessageConverter() {

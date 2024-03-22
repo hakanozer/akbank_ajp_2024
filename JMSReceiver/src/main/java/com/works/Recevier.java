@@ -1,6 +1,7 @@
 package com.works;
 
 import com.works.models.Email;
+import org.springframework.jms.annotation.EnableJms;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
 
