@@ -12,7 +12,9 @@ public class JmsSender {
     final JmsTemplate jmsTemplate;
 
     public void sender(Email email) {
-        jmsTemplate.convertAndSend("mailDestination", email);
+        for (int i = 0; i < 10; i++) {
+            jmsTemplate.convertAndSend("mailDestination", email);
+        }
     }
 
 }
